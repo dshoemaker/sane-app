@@ -7,4 +7,19 @@
     <string name="report_title_label">Title</string>
     <string name="report_details_label">Details</string>
     <string name="report_reported_label">Reported</string>
+
+    <string name="undefined">Undefined</string>
+    <string name="click_the_button">Click the \'Red\' button</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="red">Red</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="indigo">Indigo</string>
+
+
 </resources>
