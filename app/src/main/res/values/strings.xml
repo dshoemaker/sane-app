@@ -20,6 +20,17 @@
     <string name="green">Green</string>
     <string name="blue">Blue</string>
     <string name="indigo">Indigo</string>
+    <string name="login_progress_signing_in">login_progress_signing_in</string>
+    <string name="username">user_name</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="facebook_login">fblogin</string>
+    <string name="signup">signup</string>
+    <string name="email">email</string>
+    <string name="signup_progress_signing_up">signup_progress_signing_up</string>
+    <string name="password_text">password</string>
+    <string name="signin_text">Login</string>
+    <string name="username_text">username</string>
 
 
 </resources>
