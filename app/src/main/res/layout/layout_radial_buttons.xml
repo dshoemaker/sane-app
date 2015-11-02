@@ -72,10 +72,11 @@
         android:padding="8dp"
         android:minWidth="75dp"
         android:minHeight="75dp"
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="bottom"
         android:clickable="true"
         android:background="@drawable/states_circle_red"
-        android:text="@string/red"/>
+        android:text="@string/red"
+        android:layout_gravity="left|bottom"
+        android:textIsSelectable="false" />
 
 </FrameLayout>

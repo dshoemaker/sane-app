@@ -20,8 +20,12 @@ public class LoginActivity extends Activity {
     private EditText et_Password;
     // Sign In
     private Button bt_SignIn;
+
     // Message
     private TextView tv_Message;
+
+    // PIN Number
+    private EditText et_PinNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,7 @@ public class LoginActivity extends Activity {
 
         // Initialization
         et_Username = (EditText) findViewById(R.id.et_Username);
-        et_Password = (EditText) findViewById(R.id.et_Password);
+        et_PinNumber = (EditText) findViewById(R.id.et_Password);
         bt_SignIn = (Button) findViewById(R.id.bt_SignIn);
         //tv_Message = (TextView) findViewById(R.id.tv_Message);
 
@@ -41,10 +45,10 @@ public class LoginActivity extends Activity {
                 // Stores User name
                 String username = String.valueOf(et_Username.getText());
                 // Stores Password
-                String password = String.valueOf(et_Password.getText());
+                String password = String.valueOf(et_PinNumber.getText());
 
                 // Validates the User name and Password for admin, admin
-                if (username.equals("admin") && password.equals("admin")) {
+                if (password.equals("1234")) {
                     tv_Message.setText("Login Successful!");
                 } else {
                     tv_Message.setText("Login Unsuccessful!");
