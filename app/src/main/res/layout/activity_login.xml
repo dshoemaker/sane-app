@@ -18,10 +18,11 @@
         android:layout_marginLeft="18dp"
 
         android:id="@+id/tv_PinNumber"
-        android:text="@string/password_text" />
+        android:text="@string/password_text"
+        android:layout_marginTop="48dp" />
 
     <EditText
-        android:id="@+id/mPinNumber"
+        android:id="@+id/et_PinNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tv_PinNumber"
@@ -39,9 +40,18 @@
         android:id="@+id/bt_SignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/mPinNumber"
-        android:layout_below="@+id/mPinNumber"
+        android:layout_alignRight="@+id/et_PinNumber"
+        android:layout_below="@+id/et_PinNumber"
         android:layout_marginTop="34dp"
         android:text="@string/signin_text" />
 
+    <TextView
+        android:id="@+id/tv_Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="bottom"
+        android:text=""
+
+        />
 </RelativeLayout>
