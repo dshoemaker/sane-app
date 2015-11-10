@@ -1,5 +1,6 @@
 package edu.umkc.dshoemaker.sane_app;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class ReportActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(this);
+        Intent intent = getIntent();
         setContentView(R.layout.join);
     }
 
@@ -66,13 +68,15 @@ public class ReportActivity extends FragmentActivity {
                 Account a1 = new Account(editID.getText().toString(), editPW.getText().toString(), editName.getText().toString(), editAge.getText().toString(), temp);
                 sendQueryToFirebase(a1);
                 initValues();
-
+                Intent intent = new Intent(v.getContext(), RadialActivity.class);
+                startActivity(intent);
             }
         });
 
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Intent intent = new Intent(v.getContext(), RadialActivity.class);
+                startActivity(intent);
             }
         });
     }

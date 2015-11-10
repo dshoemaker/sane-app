@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends Activity {
     // User name
@@ -33,17 +34,17 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         // Initialization
-        et_Username = (EditText) findViewById(R.id.et_Username);
-        et_PinNumber = (EditText) findViewById(R.id.et_Password);
+        //et_Username = (EditText) findViewById(R.id.et_Username);
+        et_PinNumber = (EditText) findViewById(R.id.et_PinNumber);
         bt_SignIn = (Button) findViewById(R.id.bt_SignIn);
-        //tv_Message = (TextView) findViewById(R.id.tv_Message);
+        tv_Message = (TextView) findViewById(R.id.tv_Message);
 
         bt_SignIn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Stores User name
-                String username = String.valueOf(et_Username.getText());
+                //String username = String.valueOf(et_Username.getText());
                 // Stores Password
                 String password = String.valueOf(et_PinNumber.getText());
 

@@ -1,6 +1,7 @@
 package edu.umkc.dshoemaker.sane_app.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.SoundEffectConstants;
@@ -9,18 +10,22 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import butterknife.Bind;
+import edu.umkc.dshoemaker.sane_app.NewReportActivity;
 import edu.umkc.dshoemaker.sane_app.R;
 
 import java.lang.ref.WeakReference;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import edu.umkc.dshoemaker.sane_app.ReportActivity;
+import edu.umkc.dshoemaker.sane_app.ViewAllReportsActivity;
 
 /**
  *
  */
 public class RadialButtonLayout extends FrameLayout {
 
+    public final static String EXTRA_MESSAGE = "edu.umkc.dshoemaker.sane_app.views.RadialButtonLayout";
     private final static long DURATION_SHORT = 400;
     private WeakReference<Context> weakContext;
 
@@ -107,26 +112,39 @@ public class RadialButtonLayout extends FrameLayout {
     @OnClick({ R.id.btn_orange, R.id.btn_yellow, R.id.btn_green, R.id.btn_blue, R.id.btn_indigo})
     public void onButtonClicked( final View btn ) {
         int resId = 0;
+        Intent intent;
         switch ( btn.getId() ) {
             case R.id.btn_orange:
+                //preferences (ReportActivity needs to be renamed)
+                intent = new Intent(btn.getContext(), ReportActivity.class);
                 resId = R.string.orange;
                 break;
             case R.id.btn_yellow:
+                //new report
+                intent = new Intent(btn.getContext(), NewReportActivity.class);
                 resId = R.string.yellow;
                 break;
             case R.id.btn_green:
+                //view old reports
+                intent = new Intent(btn.getContext() , ViewAllReportsActivity.class);
                 resId = R.string.green;
                 break;
             case R.id.btn_blue:
+                intent = new Intent(btn.getContext(), ReportActivity.class);
+                //other option
                 resId = R.string.blue;
                 break;
             case R.id.btn_indigo:
+                //another option
+                intent = new Intent(btn.getContext(), ReportActivity.class);
                 resId = R.string.indigo;
                 break;
             default:
+                intent = new Intent(btn.getContext(), ReportActivity.class);
                 resId = R.string.undefined;
         }
-        showToast(resId);
+        //showToast(resId);
+        btn.getContext().startActivity(intent);
         btn.playSoundEffect( SoundEffectConstants.CLICK);
     }
 
