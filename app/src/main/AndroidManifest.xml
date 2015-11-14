@@ -11,18 +11,24 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="edu.umkc.dshoemaker.sane_app.ReportActivity"
-            android:label="Sign-up Page"
+            android:name="edu.umkc.dshoemaker.sane_app.ResponseListActivity"
+            android:label="Response List Page"
             android:parentActivityName=".RadialActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.umkc.dshoemaker.sane_app.ReportActivity" />
+                android:value="edu.umkc.dshoemaker.sane_app.ResponseListActivity" />
         </activity>
+        <activity
+            android:name=".ResponseActivity"
+            android:label="Response Form" >
+
+        </activity>
+        <activity android:name=".qna.QnaActivity"/>
+        <activity android:name=".register.registerActivity"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

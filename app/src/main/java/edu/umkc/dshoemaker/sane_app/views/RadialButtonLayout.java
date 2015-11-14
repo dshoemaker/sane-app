@@ -10,15 +10,16 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import butterknife.Bind;
-import edu.umkc.dshoemaker.sane_app.NewReportActivity;
 import edu.umkc.dshoemaker.sane_app.R;
 
 import java.lang.ref.WeakReference;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import edu.umkc.dshoemaker.sane_app.ReportActivity;
-import edu.umkc.dshoemaker.sane_app.ViewAllReportsActivity;
+import edu.umkc.dshoemaker.sane_app.ResponseActivity;
+import edu.umkc.dshoemaker.sane_app.ResponseListActivity;
+import edu.umkc.dshoemaker.sane_app.qna.QnaActivity;
+import edu.umkc.dshoemaker.sane_app.register.registerActivity;
 
 /**
  *
@@ -115,32 +116,32 @@ public class RadialButtonLayout extends FrameLayout {
         Intent intent;
         switch ( btn.getId() ) {
             case R.id.btn_orange:
-                //preferences (ReportActivity needs to be renamed)
-                intent = new Intent(btn.getContext(), ReportActivity.class);
+                //preferences ( needs to be renamed)
+                intent = new Intent(btn.getContext(), ResponseActivity.class);
                 resId = R.string.orange;
                 break;
             case R.id.btn_yellow:
                 //new report
-                intent = new Intent(btn.getContext(), NewReportActivity.class);
+                intent = new Intent(btn.getContext(), QnaActivity.class);
                 resId = R.string.yellow;
                 break;
             case R.id.btn_green:
                 //view old reports
-                intent = new Intent(btn.getContext() , ViewAllReportsActivity.class);
+                intent = new Intent(btn.getContext() , QnaActivity.class);
                 resId = R.string.green;
                 break;
             case R.id.btn_blue:
-                intent = new Intent(btn.getContext(), ReportActivity.class);
+                intent = new Intent(btn.getContext(), registerActivity.class);
                 //other option
                 resId = R.string.blue;
                 break;
             case R.id.btn_indigo:
                 //another option
-                intent = new Intent(btn.getContext(), ReportActivity.class);
+                intent = new Intent(btn.getContext(), ResponseListActivity.class);
                 resId = R.string.indigo;
                 break;
             default:
-                intent = new Intent(btn.getContext(), ReportActivity.class);
+                intent = new Intent(btn.getContext(), ResponseActivity.class);
                 resId = R.string.undefined;
         }
         //showToast(resId);
